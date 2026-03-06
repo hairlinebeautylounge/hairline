@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0f0f13;
+  --color-brand-light: #f5f5f7;
+  --color-brand-accent: #C07941;
+  --color-brand-gold-light: #d4a373;
+  --color-brand-gold-dark: #9d6435;
+  --color-brand-charcoal: #1a1a21;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-brand-dark);
+    color: #e5e7eb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(192, 121, 65, 0.3);
+    color: white;
+  }
+}
+
+@layer components {
+
+  /* Navigation Links */
+  .nav-link {
+    @apply relative text-sm font-medium transition-colors hover:text-brand-accent px-2 py-1;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-brand-accent scale-x-0 transition-transform origin-right duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Glassmorphism utility */
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Logo styles */
+  .logo-text {
+    @apply flex flex-col items-start leading-tight;
+  }
+
+  .logo-text .main-title {
+    @apply font-sans font-bold tracking-[0.2em] text-white uppercase;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  .logo-text .sub-title {
+    @apply font-serif italic tracking-[0.1em] text-brand-accent/80;
+    font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  }
+
+  /* Service list refinements */
+  .service-row {
+    @apply flex items-baseline transition-all duration-300 py-1;
+  }
+
+  .service-row:hover .name {
+    @apply text-brand-accent;
+  }
+
+  .service-row .name {
+    @apply font-medium text-gray-200 transition-colors;
+  }
+
+  .service-row .dots {
+    @apply flex-grow border-b border-dotted border-gray-700 mx-4 self-center opacity-40;
+  }
+
+  .service-row .price {
+    @apply font-serif font-semibold text-white;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
