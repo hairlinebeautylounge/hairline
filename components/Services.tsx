@@ -5,11 +5,11 @@ const serviceCategories = [
     section: "Hair Design",
     title: "Styling",
     services: [
-      { name: "Brushing", price: "10" },
+      { name: "Brushing", price: "12" },
       { name: "Wave", price: "15" },
-      { name: "Haircut", price: "20" },
-      { name: "Demi chignon", price: "25" },
-      { name: "Chignon", price: "35" },
+      { name: "Haircut", price: "25" },
+      { name: "Demi chignon", price: "30" },
+      { name: "Chignon", price: "40" },
       { name: "Extension 1 Piece", price: "20" },
       { name: "Wedding", price: "400" }
     ]
@@ -18,17 +18,18 @@ const serviceCategories = [
     section: "Hair Design",
     title: "Color",
     services: [
-      { name: "Dye roots", price: "20" },
-      { name: "Hair dye", price: "30+" },
-      { name: "Majirel roots", price: "35" },
-      { name: "Majirel complete", price: "40+" },
-      { name: "Sans amoniac roots", price: "25" },
-      { name: "Sans amoniac complete", price: "30+" },
-      { name: "Inoa roots", price: "40" },
-      { name: "Inoa complete", price: "45+" },
+      { name: "Dye roots", price: "25" },
+      { name: "Hair dye", price: "35+" },
+      { name: "Majirel roots", price: "40" },
+      { name: "Majirel complete", price: "50+" },
+      { name: "Sans amoniac roots", price: "30" },
+      { name: "Sans amoniac complete", price: "40+" },
+      { name: "Inoa roots", price: "45" },
+      { name: "Inoa complete", price: "55+" },
       { name: "Highlight", price: "100+" },
-      { name: "Lowlight", price: "70+" },
-      { name: "Highlight ombré", price: "100 - 150" }
+      { name: "Lowlight", price: "80+" },
+      { name: "Highlight ombré", price: "120 - 170" },
+      { name: "Keratine & Crystal", price: "120+" }
     ]
   },
   {
@@ -36,7 +37,7 @@ const serviceCategories = [
     title: "Hair Care",
     services: [
       { name: "Bain d'huile", price: "20+" },
-      { name: "Keratine & Crystal", price: "100+" }
+      { name: "Keratine & Crystal", price: "120+" }
     ],
     hasImage: true
   },
