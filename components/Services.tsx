@@ -29,7 +29,7 @@ const serviceCategories = [
       { name: "Highlight", price: "100+" },
       { name: "Lowlight", price: "80+" },
       { name: "Highlight ombré", price: "120 - 170" },
-      { name: "Keratine & Crystal", price: "120+" }
+
     ]
   },
   {
